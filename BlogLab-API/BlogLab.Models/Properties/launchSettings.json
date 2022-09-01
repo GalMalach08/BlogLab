@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "BlogLab.Models": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:58895;http://localhost:58896"
+    }
+  }
+}

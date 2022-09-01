@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BlogLab.Repository
 {
-    public interface IblogRepository
+    public interface IBlogRepository
     {
         public Task<Blog> UpsertAsync(BlogCreate blogCreate, int applicationUserId);
 

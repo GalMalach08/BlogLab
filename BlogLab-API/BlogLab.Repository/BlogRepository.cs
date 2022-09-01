@@ -13,7 +13,7 @@ using BlogLab.Models.Account;
 
 namespace BlogLab.Repository
 {
-    public class BlogRepository : IblogRepository
+    public class BlogRepository : IBlogRepository
     {
         private readonly IConfiguration _config;
         public BlogRepository(IConfiguration config)
@@ -42,7 +42,7 @@ namespace BlogLab.Repository
             using (var connection = new SqlConnection(_config.GetConnectionString("DefaultConnection")))
             {
                 await connection.OpenAsync();
-                using (var multi = await connection.QueryMultipleAsync("Blog_All",
+                using (var multi = await connection.QueryMultipleAsync("Blog_GetAll",
                     new
                     {
                         offset = (blogpaging.Page - 1) * blogpaging.PageSize,
